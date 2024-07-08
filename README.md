@@ -52,7 +52,17 @@ your-project/
 └── notify-deploy-finish.ps1
 ```
 
-### 4.  Deploy
+### 4. Set PowerShell Execution Policy
+
+Ensure your PowerShell execution policy allows running scripts. Open PowerShell as an administrator and run the following commands:
+
+```
+Get-ExecutionPolicy
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+
+```
+
+### 5.  Deploy
 
 ```
 sfdx project deploy start --source-dir .\force-app\main\default\classes\LocationSiteSyncTriggersTest.cls
